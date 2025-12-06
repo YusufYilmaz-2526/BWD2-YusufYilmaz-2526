@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Components One-Page – Funny Edition</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light bg-light" aria-label="menü">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand fw-bold" href="#">Mijn Site</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Welkom op onze website!</h1>
+        <p class="lead">Gemaakt met liefde… en een klein beetje frustratie toen de CSS niet wou meewerken.</p>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <section class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#kaarten">Over ons</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </section>
+
+    <!-- ALERT -->
+    <section class="container mt-3">
+        <div class="alert alert-success">
+            Hoera! De pagina is geladen zonder errors.
+            (Dat is al meer dan je vorige project.)
+        </div>
+    </section>
+
+    <!-- THREE CARDS -->
+    <section class="container mt-4" id="kaarten">
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Wat doen we? <span class="badge bg-secondary ms-1">Info</span>
+                        </h5>
+                        <p class="card-text">
+                            Wij bouwen websites die er zo professioneel uitzien
+                            dat zelfs je oma denkt dat je een “echte programmeur” bent.
+                        </p>
+                        <a href="#" class="btn btn-primary">Toon magie</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Voor wie is dit? <span class="badge bg-secondary ms-1">Info</span>
+                        </h5>
+                        <p class="card-text">
+                            Voor studenten die net ontdekt hebben dat HTML géén
+                            programmeertaal is… maar we zeggen niets tegen de anderen.
+                        </p>
+                        <a href="#" class="btn btn-primary">Auw, mijn ego</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Waarom Bootstrap? <span class="badge bg-secondary ms-1">Info</span>
+                        </h5>
+                        <p class="card-text">
+                            Omdat zelf CSS schrijven fantastisch is…
+                            tot je één spatie verkeerd zet en alles ontploft.
+                        </p>
+                        <a href="#" class="btn btn-primary">Red me, Bootstrap</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ACCORDION (altijd open) -->
+    <section class="container mt-4 mb-4">
+        <h2 class="h4 mb-3">Veelgestelde vragen</h2>
+
+        <div class="accordion">
+
+            <!-- Q1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button">
+                        Moet ik Bootstrap installeren?
+                    </button>
+                </h2>
+                <div class="accordion-collapse show">
+                    <div class="accordion-body">
+                        Nee. Gewoon een linkje kopiëren zoals iedereen op StackOverflow doet.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="accordion-item mt-2">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button">
+                        Wat zijn components?
+                    </button>
+                </h2>
+                <div class="accordion-collapse show">
+                    <div class="accordion-body">
+                        Components zijn kant-en-klare bouwblokjes die jou er slimmer laten lijken
+                        dan je eigenlijk bent.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BUTTON GROUP -->
+    <section class="container text-center mb-5">
+        <p class="mb-2">Klik gerust. Ze doen toch niets… maar je voelt je wel bezig.</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary">Home</button>
+            <button type="button" class="btn btn-outline-secondary">Info</button>
+            <button type="button" class="btn btn-outline-secondary">Contact</button>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="bg-light py-5" id="contact">
+        <div class="container text-center">
+            <h2>Contact</h2>
+            <p class="mt-2">
+                Vragen? Problemen? Crashende webpagina’s?
+                Stuur ons een bericht. We doen alsof we het kunnen oplossen.
+            </p>
+            <button type="button" class="btn btn-primary">Help mij alstublieft</button>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 bg-dark text-white">
+        <small>© 2025 Mijn Site – Alle rechten voorbehouden.
+            (Behalve de bugs. Die mag je houden.)</small>
+    </footer>
+
+</body>
+
+</html>
