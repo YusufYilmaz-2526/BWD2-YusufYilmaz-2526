@@ -1,6 +1,8 @@
 # Basic Web Development 2
 
-Yusuf Yilmaz
-2526
+## Oefeningen 03.Bootstrap formulieren
 
-## Oefeningen 02.Bootstrap Components
+**Naam:** Yusuf Yılmaz  
+**Klasgroep:** BWD2  
+**Opleiding:** ICT  
+**Academiejaar:** 2025–2026  
