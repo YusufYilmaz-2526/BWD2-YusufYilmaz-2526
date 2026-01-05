@@ -1,0 +1,32 @@
+body { scroll-padding-top: 5rem; }
+.hero-mask { background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15)); }
+.card img.card-img-top { object-fit: cover; height: 220px; }
+.shadow-soft { box-shadow: 0 .25rem .75rem rgba(0,0,0,.05); }
+.sticky-sidebar { top: 6rem; }
+.fav-btn {
+position: absolute; top: .5rem; right: .5rem;
+background: rgba(255,255,255,.85);
+border: none; width: 40px; height: 40px; border-radius: 999px;
+display: inline-flex; align-items: center; justify-content: center;
+}
+.fav-btn:hover { background: rgba(255,255,255,.95); }
+.icon-heart { width: 20px; height: 20px; fill: none; stroke: #dc3545; stroke-width: 2; }
+.icon-cart { width: 18px; height: 18px; fill: currentColor; }
+
+/* Show valid/invalid styling only on required fields */
+.was-validated .form-control:valid:not(:required),
+.was-validated .form-select:valid:not(:required),
+.was-validated .form-control:invalid:not(:required),
+.was-validated .form-select:invalid:not(:required) {
+  border-color: var(--bs-border-color);
+  background-image: none;
+  box-shadow: none;
+}
+
+/* Keep default appearance for optional controls, including range, color, file, etc. */
+.was-validated input:not(:required),
+.was-validated select:not(:required),
+.was-validated textarea:not(:required) {
+  outline: none;
+}
+

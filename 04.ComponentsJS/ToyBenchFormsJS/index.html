@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ToyBench Pro — Speelgoedwinkel</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+  <!-- Promo bar -->
+  <div class="alert alert-warning rounded-0 text-center mb-0 py-2" role="alert">
+    Najaarspromo 🍂 — gratis verzending vanaf € 49.
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Hoofdnavigatie">
+
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img alt="ToyBench Pro" height="28" src="img/toybench-pro-light.svg">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Alle speelgoed</a></li>
+              <li><a class="dropdown-item" href="#">Voertuigen</a></li>
+              <li><a class="dropdown-item" href="#">Pluche</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Cadeaubonnen</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Registratie</a>
+          </li>
+        </ul>
+
+        <form class="d-flex gap-2" role="search">
+          <input class="form-control" placeholder="Zoeken" type="search" aria-label="Zoeken">
+          <button class="btn btn-outline-primary" type="submit">Zoeken</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero carousel -->
+  <header class="bg-white">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="ratio ratio-16x9">
+            <img alt="Brandweerwagen" src="img/fire-truck.jpg" class="d-block w-100 object-fit-cover">
+          </div>
+
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="container">
+              <div class="bg-dark bg-opacity-50 rounded-3 p-3 w-75">
+                <h1 class="h3 mb-1">Tijdloos speelgoed</h1>
+                <p class="mb-0">Veilig, duurzaam en klaar voor avontuur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <img alt="Loopfiets" src="img/bicycle-bronze.jpg" class="d-block w-100 object-fit-cover">
+          </div>
+
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="container">
+              <div class="bg-dark bg-opacity-50 rounded-3 p-3 w-75">
+                <h2 class="h4 mb-1">Klassieke loopfietsen</h2>
+                <p class="mb-0">Stevig design voor uren rijplezier.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="ratio ratio-16x9">
+            <img alt="Teddy met koffer" src="img/teddy-luggage.jpg" class="d-block w-100 object-fit-cover">
+          </div>
+
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="container">
+              <div class="bg-dark bg-opacity-50 rounded-3 p-3 w-75">
+                <h2 class="h4 mb-1">Knuffels voor onderweg</h2>
+                <p class="mb-0">Altijd een maatje bij de hand.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+        aria-label="Vorige slide">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Vorige</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+        aria-label="Volgende slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Volgende</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main class="container my-4">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb small mb-0">
+        <li class="breadcrumb-item"><a href="#" class="link-primary text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item"><a href="#" class="link-primary text-decoration-none">Speelgoed</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Aanbevolen</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+
+            <div class="border rounded-2 mb-3">
+              <div class="px-3 py-2 fw-semibold border-bottom bg-body-tertiary">Categorieën</div>
+              <div class="list-group list-group-flush">
+                <a href="#"
+                  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  Voertuigen
+                  <span class="badge bg-primary rounded-pill">11</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Pluche</a>
+                <a href="#" class="list-group-item list-group-item-action">Bouw &amp; puzzel</a>
+                <a href="#" class="list-group-item list-group-item-action">Overig</a>
+              </div>
+            </div>
+
+            <div class="accordion mb-3" id="filterAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="f1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fc1"
+                    aria-expanded="true" aria-controls="fc1">Leeftijd</button>
+                </h2>
+                <div id="fc1" class="accordion-collapse collapse show" aria-labelledby="f1"
+                  data-bs-parent="#filterAccordion">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" id="l1" type="checkbox">
+                      <label class="form-check-label" for="l1">0–2 jaar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="l2" type="checkbox">
+                      <label class="form-check-label" for="l2">3–5 jaar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="l3" type="checkbox">
+                      <label class="form-check-label" for="l3">6+ jaar</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="f2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#fc2" aria-expanded="false" aria-controls="fc2">Merk</button>
+                </h2>
+                <div id="fc2" class="accordion-collapse collapse" aria-labelledby="f2"
+                  data-bs-parent="#filterAccordion">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" id="m1" type="checkbox">
+                      <label class="form-check-label" for="m1">ToyBench</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="m2" type="checkbox">
+                      <label class="form-check-label" for="m2">ClassicPlay</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="f3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#fc3" aria-expanded="false" aria-controls="fc3">Prijs</button>
+                </h2>
+                <div id="fc3" class="accordion-collapse collapse" aria-labelledby="f3"
+                  data-bs-parent="#filterAccordion">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" id="p1" name="prijs" type="radio">
+                      <label class="form-check-label" for="p1">&lt; € 20</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="p2" name="prijs" type="radio">
+                      <label class="form-check-label" for="p2">€ 20 – € 50</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="p3" name="prijs" type="radio">
+                      <label class="form-check-label" for="p3">&gt; € 50</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="f4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#fc4" aria-expanded="false" aria-controls="fc4">Thema</button>
+                </h2>
+                <div id="fc4" class="accordion-collapse collapse" aria-labelledby="f4"
+                  data-bs-parent="#filterAccordion">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" id="t1" type="checkbox">
+                      <label class="form-check-label" for="t1">Avontuur</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="t2" type="checkbox">
+                      <label class="form-check-label" for="t2">Educatief</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="t3" type="checkbox">
+                      <label class="form-check-label" for="t3">Creatief</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a class="btn btn-outline-secondary w-100" data-bs-toggle="collapse" href="#shippingInfo" type="button"
+              aria-expanded="false" aria-controls="shippingInfo">
+              Toon leveringsinfo
+            </a>
+            <div class="collapse mt-2" id="shippingInfo">
+              <div class="alert alert-info mb-0">
+                Gratis verzending vanaf € 49. Levertijd 1–3 werkdagen.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products -->
+      <section class="col-lg-9">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Brandweerwagen" src="img/fire-truck.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Brandweerwagen</h3>
+                  <span class="badge bg-danger">Nieuw</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Sirenes niet inbegrepen, fantasie wel! Robuuste wagen met uitschuifladder.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 24,90</span>
+                <small class="text-body-secondary">Voorraad: 12</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Koperen loopfiets" src="img/bicycle-bronze.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Koperen loopfiets</h3>
+                  <span class="badge bg-primary">Bestseller</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Balanceer als een pro — de eerste kilometers tel je met een glimlach.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 89,00</span>
+                <small class="text-body-secondary">Voorraad: 5</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Teddy met koffer" src="img/teddy-luggage.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Teddy met koffer</h3>
+                  <span class="badge bg-success">Op voorraad</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Reismaatje met extra knuffelkrediet. Past in elke rugzak.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 18,50</span>
+                <small class="text-body-secondary">Voorraad: 21</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Draaispin" src="img/toy-spinner.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Draaispin</h3>
+                  <span class="badge bg-warning text-dark">Deal</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Zakformaat turbo-plezier. Voor fidget-fans en rustzoekers.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 6,95</span>
+                <small class="text-body-secondary">Voorraad: 55</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Mint Pony Figure" src="img/pony-mint-figure.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Mint Pony Figure</h3>
+                  <span class="badge bg-danger">Nieuw</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Kleurrijk vriendje met megagrote ogen. Galoppeert richting speelkamer.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 9,90</span>
+                <small class="text-body-secondary">Voorraad: 30</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Sardineblik Auto" src="img/sardine-car.webp" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Sardineblik Auto</h3>
+                  <span class="badge bg-warning text-dark">Limited</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Upcycle-magie op wieltjes. Retro charme, houten asjes — vroom!
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 14,50</span>
+                <small class="text-body-secondary">Voorraad: 9</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Houten pony op wielen" src="img/wooden-pony.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Houten pony op wielen</h3>
+                  <span class="badge bg-info text-dark">Aanrader</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Nostalgisch trekdiertje. Gemaakt voor rondjes door de woonkamer.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 16,95</span>
+                <small class="text-body-secondary">Voorraad: 14</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Dinky Citroën DS" src="img/dinky-citroen.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Dinky Citroën DS</h3>
+                  <span class="badge bg-secondary">Collector</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Kleine klassieker, grote stijl. Parkeer hem trots op de boekenplank.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 39,00</span>
+                <small class="text-body-secondary">Voorraad: 3</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="Play-Doh Mini’s" src="img/play-doh.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">Play-Doh Mini’s</h3>
+                  <span class="badge bg-success">Creatief</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Kneden, rollen, lachen. De kleurenmix die nooit verveelt.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 7,50</span>
+                <small class="text-body-secondary">Voorraad: 60</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="View-Master" src="img/view-master.png" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">View-Master</h3>
+                  <span class="badge bg-secondary">Retro</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Klik, *woah!* — 3D-plaatjes zoals vroeger. Tijdreizen met een hendeltje.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 19,90</span>
+                <small class="text-body-secondary">Voorraad: 11</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img alt="LEGO® Mix" src="img/lego-bricks.jpg" class="card-img-top object-fit-cover">
+                </div>
+                <button type="button" class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2"
+                  aria-label="Favoriet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                  <h3 class="h6 mb-0">LEGO® Mix</h3>
+                  <span class="badge bg-primary">Bouwpret</span>
+                </div>
+                <p class="small text-body-secondary mb-3">
+                  Een regenboog aan steentjes. Bouw je eigen miniwereld.
+                </p>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary btn-sm">Details</button>
+                  <button title="In winkelmand" type="button" class="btn btn-outline-secondary btn-sm"
+                    aria-label="In winkelmand">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path
+                        d="M0 1h2l.4 2H16l-2 7H4L3.2 5H1.1L0 1zm5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">€ 12,95</span>
+                <small class="text-body-secondary">Voorraad: 100</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-4" aria-label="Paginatie">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><span class="page-link">Vorige</span></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Volgende</a></li>
+          </ul>
+        </nav>
+
+      </section>
+    </div>
+
+    <!-- FAQ -->
+    <section id="faq" class="mt-5">
+      <h2 class="h4 mb-3">Veelgestelde vragen</h2>
+
+      <div class="accordion" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1"
+              aria-expanded="true" aria-controls="a1">Is het speelgoed veilig?</button>
+          </h2>
+          <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Ja. Al onze producten voldoen aan de Europese speelgoedrichtlijn (EN 71) en zijn CE-gekeurd.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2"
+              aria-expanded="false" aria-controls="a2">Hoe werkt verzending en levering?</button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Bestellingen vóór 22:00 worden dezelfde werkdag verwerkt. Levering in 1–3 werkdagen, gratis vanaf € 49.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3"
+              aria-expanded="false" aria-controls="a3">Kan ik retourneren of ruilen?</button>
+          </h2>
+          <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Je kunt binnen 30 dagen kosteloos retourneren mits onbeschadigd en in originele verpakking. Ruilen kan via
+              ons retourportaal.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4"
+              aria-expanded="false" aria-controls="a4">Vanaf welke leeftijd zijn de producten geschikt?</button>
+          </h2>
+          <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Elk product heeft een aanbevolen minimumleeftijd. Let op kleine onderdelen voor kinderen jonger dan 3
+              jaar.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5"
+              aria-expanded="false" aria-controls="a5">Hoe zit het met garantie?</button>
+          </h2>
+          <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Wettelijke garantie van 2 jaar op fabricagefouten. Neem contact op met support voor afhandeling.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6"
+              aria-expanded="false" aria-controls="a6">Kan ik een cadeaubericht toevoegen?</button>
+          </h2>
+          <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#faqAcc">
+            <div class="accordion-body">
+              Ja. Tijdens het afrekenen kun je een gratis boodschap toevoegen. Cadeauverpakking is mogelijk.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top py-4">
+      <div class="d-flex flex-column align-items-center gap-2">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link px-2" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Over</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Contact</a></li>
+        </ul>
+        <p class="mb-0 small text-muted">© 2025 ToyBench</p>
+      </div>
+    </footer>
+
+
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

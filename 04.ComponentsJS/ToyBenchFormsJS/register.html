@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ToyBench Pro — Registratie</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <!-- Promo bar -->
+  <div class="alert alert-warning rounded-0 text-center mb-0 py-2" role="alert">
+    Word lid van <strong>ToyBench Pro</strong> en ontvang 10% welkomstkorting.
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Hoofdnavigatie">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img alt="ToyBench Pro" height="28" src="img/toybench-pro-light.svg">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Alle speelgoed</a></li>
+              <li><a class="dropdown-item" href="#">Voertuigen</a></li>
+              <li><a class="dropdown-item" href="#">Pluche</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Cadeaubonnen</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="register.html">Registratie</a></li>
+        </ul>
+
+        <form class="d-flex gap-2" role="search">
+          <input class="form-control" placeholder="Zoeken" type="search" aria-label="Zoeken">
+          <button class="btn btn-outline-primary" type="submit">Zoeken</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb small mb-0">
+        <li class="breadcrumb-item"><a class="link-primary text-decoration-none" href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Registratie</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4 align-items-start">
+      <!-- FORM -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body border-bottom">
+            <h1 class="h4 mb-1">Maak jouw ToyBench Pro-account</h1>
+            <small class="text-body-secondary">Velden met * zijn verplicht.</small>
+          </div>
+
+          <div class="card-body">
+            <form>
+              <!-- ACCOUNT -->
+              <div class="text-uppercase small text-body-secondary fw-semibold mb-2">Account</div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mailadres *</label>
+                  <input id="email" placeholder="naam@voorbeeld.be" type="email" class="form-control" required>
+                  <div class="invalid-feedback">Geef een geldig e-mailadres op.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="username" class="form-label">Gebruikersnaam *</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="userprefix">@</span>
+                    <input id="username" type="text" class="form-control" aria-describedby="userprefix" required>
+                    <button type="button" class="btn btn-outline-secondary">Beschikbaar?</button>
+                  </div>
+                  <div class="form-text">Enkel letters, cijfers en underscores.</div>
+                  <div class="invalid-feedback">Kies een gebruikersnaam.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pwd" class="form-label">Wachtwoord *</label>
+                  <input id="pwd" minlength="8" type="password" class="form-control" required>
+                  <div class="form-text">Minstens 8 tekens. Gebruik bij voorkeur een zin.</div>
+                  <div class="invalid-feedback">Te kort: minstens 8 tekens.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="pwd2" class="form-label">Herhaal wachtwoord *</label>
+                  <input id="pwd2" type="password" class="form-control" required>
+                  <div class="invalid-feedback">Herhaal je wachtwoord.</div>
+                </div>
+              </div>
+
+
+              <!-- PERSOONLIJK -->
+              <div class="text-uppercase small text-body-secondary fw-semibold mt-4 mb-2">Persoonlijk</div>
+
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="firstName" class="form-label">Voornaam *</label>
+                  <input id="firstName" type="text" class="form-control" required>
+                  <div class="invalid-feedback">Voornaam is verplicht.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="lastName" class="form-label">Achternaam *</label>
+                  <input id="lastName" type="text" class="form-control" required>
+                  <div class="invalid-feedback">Achternaam is verplicht.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="birth" class="form-label">Geboortedatum</label>
+                  <input id="birth" type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Telefoon</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+32</span>
+                    <input id="phone" placeholder="04..." type="tel" class="form-control">
+                    <button class="btn input-group-text text-danger bg-light" type="button"
+                      aria-label="Favoriet telefoon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path
+                          d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z">
+                        </path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="form-text">We gebruiken dit alleen voor leveringsupdates.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="website" class="form-label">Website (optioneel)</label>
+                  <div class="input-group">
+                    <span class="input-group-text">https://</span>
+                    <input id="website" placeholder="voorbeeld.be" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- ADRES -->
+              <div class="text-uppercase small text-body-secondary fw-semibold mt-4 mb-2">Adres</div>
+
+              <div class="row g-3">
+                <div class="col-md-8">
+                  <label for="street" class="form-label">Straat &amp; nr. *</label>
+                  <input id="street" type="text" class="form-control" required>
+                  <div class="invalid-feedback">Vul je straat en nummer in.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="bus" class="form-label">Bus</label>
+                  <input id="bus" placeholder="bvb. bus 2" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="zip" class="form-label">Postcode *</label>
+                  <input id="zip" pattern="\d{4}" type="text" class="form-control" required>
+                  <div class="invalid-feedback">Geef een geldige postcode (4 cijfers).</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="city" class="form-label">Gemeente *</label>
+                  <input id="city" type="text" class="form-control" required>
+                  <div class="invalid-feedback">Gemeente is verplicht.</div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="country" class="form-label">Land *</label>
+                  <select id="country" class="form-select" required>
+                    <option selected>Kies...</option>
+                    <option>België</option>
+                    <option>Nederland</option>
+                    <option>Duitsland</option>
+                    <option>Frankrijk</option>
+                  </select>
+                  <div class="invalid-feedback">Kies je land.</div>
+                </div>
+              </div>
+
+              <!-- VOORKEUREN -->
+              <div class="text-uppercase small text-body-secondary fw-semibold mt-4 mb-2">Voorkeuren</div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="favCat" class="form-label">Favoriete categorie</label>
+                  <select id="favCat" class="form-select">
+                    <option>Voertuigen</option>
+                    <option>Pluche</option>
+                    <option>Bouw &amp; puzzel</option>
+                    <option>Creatief</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="themes" class="form-label">Interesses (meervoud)</label>
+                  <select id="themes" size="4" class="form-select">
+                    <option>Avontuur</option>
+                    <option>Educatief</option>
+                    <option>Creatief</option>
+                    <option>Retro</option>
+                  </select>
+                  <div class="form-text">Houd Ctrl/Cmd ingedrukt om meerdere te selecteren.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="color" class="form-label">Kleuraccent</label>
+                  <input id="color" title="Kies je accentkleur" type="color" value="#ffd166"
+                    class="form-control form-control-color">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="range" class="form-label">Nieuwsbrief frequentie</label>
+                  <input id="range" max="10" min="0" type="range" class="form-range">
+                  <div class="d-flex justify-content-between small text-body-secondary">
+                    <span>0 = zelden 10 = vaak</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="brand" class="form-label">Favoriet merk</label>
+                  <input type="text" id="brand" class="form-control" list="datalistOptions"
+                    placeholder="Begin te typen...">
+                  <datalist id="datalistOptions">
+                    <option value="ToyBench"></option>
+                    <option value="ClassicPlay"></option>
+                    <option value="BrickCo"></option>
+                    <option value="PlushWorks"></option>
+                  </datalist>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="avatar" class="form-label">Profielfoto (optioneel)</label>
+                  <input accept=".jpg,.png" id="avatar" type="file" class="form-control">
+                  <div class="form-text">JPG of PNG, max 5MB.</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check form-switch">
+                    <input id="switchDark" type="checkbox" class="form-check-input">
+                    <label for="switchDark" class="form-check-label">Donker thema gebruiken</label>
+                  </div>
+                </div>
+
+                <!-- FACTURATIE -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input id="invoiceToggle" type="checkbox" class="form-check-input" data-bs-toggle="collapse"
+                      data-bs-target="#invoiceArea" aria-controls="invoiceArea" aria-expanded="false">
+                    <label for="invoiceToggle" class="form-check-label">
+                      Zakelijke facturatiegegevens toevoegen
+                    </label>
+                  </div>
+
+                  <div id="invoiceArea" class="collapse mt-3">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="company" class="form-label">Bedrijfsnaam</label>
+                        <input id="company" type="text" class="form-control">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="vat" class="form-label">BTW-nummer</label>
+                        <div class="input-group">
+                          <span class="input-group-text">BE</span>
+                          <input id="vat" placeholder="0123.456.789" type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- OVERIG -->
+              <div class="text-uppercase small text-body-secondary fw-semibold mt-4 mb-2">Overig</div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Contactvoorkeur</label>
+
+                  <div class="form-check">
+                    <input id="c1" name="contact" type="radio" class="form-check-input">
+                    <label for="c1" class="form-check-label">E-mail</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input id="c2" name="contact" type="radio" class="form-check-input">
+                    <label for="c2" class="form-check-label">Telefoon</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Afspraken</label>
+
+                  <div class="form-check">
+                    <input id="terms" type="checkbox" value="" class="form-check-input">
+                    <label for="terms" class="form-check-label">Ik accepteer de algemene voorwaarden *</label>
+                    <div class="invalid-feedback">Je moet akkoord gaan.</div>
+                  </div>
+
+                  <div class="form-check">
+                    <input id="promo" type="checkbox" value="" class="form-check-input">
+                    <label for="promo" class="form-check-label">Ontvang acties &amp; nieuws</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+
+                  <label for="customerNumber" class="form-label">Jouw klantnummer</label>
+                  <input id="customerNumber" type="text" class="form-control" value="Wordt toegewezen na registratie"
+                    readonly>
+
+
+                </div>
+              </div>
+
+              <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">Account aanmaken</button>
+                <button type="reset" class="btn btn-outline-secondary">Leegmaken</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIPS -->
+      <aside class="col-lg-4">
+        <div class="card shadow-sm mb-3" id="hulp">
+          <div class="card-header bg-white fw-semibold">Tips</div>
+          <div class="list-group list-group-flush">
+            <div class="list-group-item">Gebruik een uniek wachtwoord.</div>
+            <div class="list-group-item">Leveradres = factuuradres? Laat de collapse dicht.</div>
+            <div class="list-group-item">Meerdere interesses? Gebruik de multiselect.</div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary">Privacy</button>
+            <span tabindex="0">
+              <button type="button" class="btn btn-outline-secondary">Tooltip</button>
+            </span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-top mt-5 py-4">
+      <div class="d-flex flex-column align-items-center gap-2">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link px-2" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Voorwaarden</a></li>
+          <li class="nav-item"><a class="nav-link px-2" href="#">Privacy</a></li>
+        </ul>
+        <p class="mb-0 small text-muted">© 2025 ToyBench</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
